@@ -1,0 +1,19 @@
+# Let's run a database via docker
+## We don't need it installed on the pc
+## All Devs use the same database version
+
+version: '3.8'
+services:
+    postgres:
+      image: postgres:latest
+      container_name: dockerclasscontainer
+      environment:
+        POSTGRES_DB: dockerclass
+        POSTGRES_USER: postgres
+        POSTGRES_PASSWORD: postgres
+      ports:
+        - "5431:5432"
+      restart: always
+
+
+
